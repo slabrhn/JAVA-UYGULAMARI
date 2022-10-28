@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// değişkenleri oluşturma
+		int mat, fizik, kimya, turkce, muzik;
+
+		// Scanner sınıfımızı tanımladık
+		Scanner avg = new Scanner(System.in);
+
+		// kullanıcıdan değerleri al
+		System.out.print("Matematik notunuz : ");
+		mat = avg.nextInt();
+		System.out.println(mat);
+		if (mat < 0 || mat > 100) {
+			mat = 0;
+		}
+		System.out.print("Fizik notunuzu girin : ");
+		fizik = avg.nextInt();
+		System.out.println(fizik);
+		if (fizik < 0 || fizik > 100) {
+			fizik = 0;
+		}
+		System.out.print("Türkçe notunuzu girin : ");
+		turkce = avg.nextInt();
+		System.out.println(turkce);
+		if (turkce < 0 || turkce > 100) {
+			turkce = 0;
+
+			System.out.print("Kimya notunuzu girin : ");
+			kimya = avg.nextInt();
+			System.out.println(kimya);
+			if (kimya < 0 || kimya > 100) {
+				kimya = 0;
+
+				System.out.print("Muzik notunuzu girin : ");
+				muzik = avg.nextInt();
+				System.out.println(muzik);
+				if (muzik < 0 || muzik > 100) {
+					muzik = 0;
+				}
+				int toplam = (mat + fizik + kimya + turkce + muzik);
+				double sonuc = toplam / 6;
+				System.out.println("Not ortalamanız :" + sonuc);
+
+				String durum = sonuc >= 70 ? "Sınıfı geçtiniz" : "Sınıfı geçemediniz";
+				System.out.println(durum);
+			}
+		}
+	}
+
+}
